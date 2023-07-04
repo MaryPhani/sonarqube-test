@@ -1,0 +1,13 @@
+version: "3"
+ports:
+
+- "9000:9000"
+- "9092:9092"
+db:
+
+image: postgres
+restart: unless-stopped
+environment:
+- POSTGRES_USER=sonarqube
+- POSTGRES_PASSWORD=sonarpass
+- POSTGRES_DB=sonarqube
